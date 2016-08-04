@@ -1,4 +1,7 @@
 {
+  "name": "dinnger-gatherings",
+  "version": "1.0.0",
+  "description": "Provide a way to easily organize and schedule dinner gatherings with friends and family",
   "private": true,
   "engines": {
     "node": ">=5.0 <7",
