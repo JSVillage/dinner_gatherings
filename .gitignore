@@ -1,5 +1,5 @@
-
-.idea
-node_modules
-build
+/node_modules
+/.idea
+.DS_Store
+bundle.js
 npm-debug.log
