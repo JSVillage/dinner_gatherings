@@ -1,0 +1,61 @@
+// ADS variables
+// -------------------------
+// -------------------------
+
+$body-bg: #E5E9EC;
+$text-color: #555;
+
+$sidebar-width: 200px;
+$sidebar-bg: #50585A !default;
+$sidebar-color: #f8f8f8 !default;
+$sidebar-item-border-color: transparent !default;
+$sidebar-item-hover-bg-color: #596163 !default;
+
+$font-weight-bold: 700 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-normal: 400 !default;
+$font-weight-thin: 300 !default;
+$font-weight-base: $font-weight-thin !default;
+
+$content-padding-vertical: 40px !default;
+$content-padding-horizontal: 40px !default;
+
+// Widgets
+// -------------------------
+
+$widget-padding-vertical: 15px !default;
+$widget-padding-horizontal: 20px !default;
+$widget-bg-color: #fff;
+$widget-border: transparent;
+
+
+//-- Dashboard
+//
+
+$dashboard-blue: #337ab7;
+$dashboard-green: #5cb85c;
+$dashboard-yellow: #f0ad4e;
+$dashboard-red: #d9534f;
+
+//-- Iconography
+//
+
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/" !default;
+
+//-- Bootstrap variables
+//
+
+$navbar-border-radius: 0;
+$breadcrumb-separator:          ">" !default;
+$font-family-sans-serif:  "Open Sans", sans-serif !default;
+
+
+//-- Open Sans variables
+//
+
+$open-sans-path: "../../bower_components/open-sans/fonts" !default;
+
+//-- Font Awesome variables
+//
+
+$fa-font-path:        "../../bower_components/font-awesome/fonts" !default;

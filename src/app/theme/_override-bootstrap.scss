@@ -1,0 +1,123 @@
+label {
+  font-weight: normal;
+}
+
+
+.form-control {
+  @include box-shadow(none);
+
+  &:focus {
+    @include box-shadow(none);
+  }
+}
+
+
+.btn-gray{
+  @include button-variant($text-color, #ddd, darken(#ddd, 5%));
+}
+
+.btn-sidebar{
+  @include button-variant(#fff, $sidebar-bg, darken($sidebar-bg, 5%));
+}
+
+
+.table-no-border {
+  margin-left: -$table-cell-padding;
+  margin-right: -$table-cell-padding;
+
+  > thead > tr > th,
+  > thead > tr > td,
+  > tbody > tr > th,
+  > tbody > tr > td,
+  > tfoot > tr > th,
+  > tfoot > tr > td {
+    border-top: 0;
+  }
+}
+
+
+.table-sm {
+  > thead > tr > th,
+  > thead > tr > td,
+  > tbody > tr > th,
+  > tbody > tr > td,
+  > tfoot > tr > th,
+  > tfoot > tr > td {
+    padding: 4px;
+  }
+
+  &.table-no-border {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+}
+
+.progress-bar{
+  border-radius: $border-radius-base;
+  @include box-shadow(none);
+}
+
+.progress-sm{
+  height: 10px;
+  margin-bottom: $line-height-computed/2;
+}
+
+.progress-xs{
+  height: 5px;
+  margin-bottom: $line-height-computed/2;
+}
+
+.breadcrumb {
+
+  > .active {
+    font-weight: $font-weight-semi-bold;
+  }
+
+  > li + li:before {
+    color: $gray-light;
+  }
+}
+
+.alert-sm{
+  padding: 10px 12px;
+  font-size: 13px;
+
+  .close{
+    font-size: 18px;
+  }
+}
+
+.alert-dismissable .close{
+  position: static;
+  color: $close-color;
+}
+
+
+.list-group-item > .fa-chevron-right.pull-right {
+  margin-top: 4px;
+}
+
+
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+
+  // Round the first and last items
+  &:first-child {
+    border-top: 0;
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.panel{
+  .dropdown-menu > &{
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+}
+
+.panel-heading{
+  border-color: $panel-inner-border;
+}

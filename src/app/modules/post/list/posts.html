@@ -1,0 +1,32 @@
+<ol class="breadcrumb">
+  <li><span class="text-muted">YOU ARE HERE</span></li>
+  <li class="active">Posts</li>
+</ol>
+<div class="row">
+    <div class="col-md-12">
+        <widget>
+            <header>
+              <button type="button" class="btn btn-sm btn-gray mt-n-xs pull-right" ui-sref="app.editPost({id: null})">Create new post</button>
+              <h4 class="widget-title">Posts</h4>
+            </header>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Last updated</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="post in vm.posts">
+                    <td>{{post.title}}</td>
+                    <td><span>{{post.date | date: 'short'}}</span></td>
+                    <td class="text-right">
+                        <button type="button" class="btn btn-default" ui-sref="app.editPost({id: post.id})">Edit</button>
+                        <button type="button" class="btn btn-danger" ng-click="vm.delete(post)">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </widget>
+    </div>
+</div>
