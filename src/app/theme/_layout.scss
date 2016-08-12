@@ -1,0 +1,103 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  font-weight: $font-weight-thin;
+}
+
+th {
+  font-weight: $font-weight-semi-bold;
+}
+
+.app {
+  height: 100%;
+  color: $text-color;
+}
+
+.widget {
+  display: block;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid $widget-border;
+
+  > header {
+    margin-bottom: 10px;
+  }
+
+  .loader{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .spinner{
+      position: absolute;
+      top: 50%;
+      width: 100%; //ie fix
+      margin-top: -10px;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.widget-title {
+  margin-top: 0;
+  color: $gray-light;
+}
+
+.content-wrap {
+  overflow: auto;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  left: 0;
+  width: 100%;
+  @include transition(left 0.5s);
+  @media (min-width: $screen-sm) {
+    width: calc(100% - #{$sidebar-width});
+    left: $sidebar-width;
+  }
+  .nav-shown & {
+    left: $sidebar-width;
+  }
+}
+
+.content {
+  min-height: 100%;
+  padding: 40px 30px;
+  background-color: $body-bg;
+}
+
+.content > .breadcrumb {
+  margin-top: -15px;
+  padding-left: 0;
+  padding-right: 0;
+  background: none;
+}
+
+.dropdown-link-container {
+  position: relative;
+  .nav-dropdown-item {
+    position: absolute;
+  }
+}
+
+.btn-circle {
+  border-radius: 50%;
+}
+
+form .error {
+  color: $brand-danger;
+}
+
+
+[ui-sref] {
+  cursor: pointer;
+}
