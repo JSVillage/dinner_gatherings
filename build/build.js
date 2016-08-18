@@ -64,7 +64,7 @@ gulp.task('jscs', function () {
         .pipe($.jscs('./.jscsrc'));
 });
 
-gulp.task('analyze', ['jshint', 'jscs']);
+gulp.task('analyze', ['jscs']); //['jshint', 'jscs']);
 
 gulp.task('injector:js', ['analyze', 'injector:css'], function () {
     return gulp.src('src/index.html')
