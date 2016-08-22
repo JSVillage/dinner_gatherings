@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/*. {
+  background-color: #1ac6ff;
+}*/
+
+a {
+  color: #00B7FF;
+}
+
+#leftBar {
+  background-color: #D3D3D3;
+}
+
+ul {
+  list-style-type: none;
+}
+
+aside ul li {
+  margin-top: 50px;
+  font-size: 20px;
+}

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .row
+    .col-xs-12
+      h1.text-center=title
+      h2.text-center Sign In
+  .row
+    .col-md-12
+      form
+        .form-group
+          label(for="emailInput") Email Address 
+          input#emailInput.form-control(type='email')
+        .form-group
+          label(for="passwordInput") Password
+          input#passwordInput.form-control(type='password')
+        button.btn.btn-primary(type="submit") Sign In
+          
+        p.text-center
+          a(href="/") Need to create an account?

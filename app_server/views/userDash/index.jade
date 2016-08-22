@@ -1,0 +1,71 @@
+extends layout
+block content
+  .container
+    .row
+      .col-xs-6.col-md-4
+        aside
+          ul
+            li
+              a Events
+            li
+              a Calendars
+      .col-xs-12.col-md-8
+        h2 Your Events
+        table.table-responsive(width="100%")
+          colgroup
+            col(width="25%")
+            col(width="25%")
+            col(width="25%")
+            col(width="25%")
+          tr
+            th What
+            th Where
+            th When
+            th Yes|No|Maybe
+            th Edit
+          tr
+            td Family Dinner
+            td 6028 W. Golden Ln. Glendale, AZ 85302
+            td 08/31/2016 6:00pm
+            td 1/0/0
+            td 
+              a Edit
+          tr
+            td JSVillage
+            td 221 E Indianola Ave, Phoenix, AZ 85012
+            td 08/29/2916 6:00pm
+            td 10/4/2
+            td 
+              a Edit
+        a(href="/rkmarks/create-event") + Create Event
+        h2 Event Invites
+        table.table-responsive(width="100%")
+          colgroup
+            col(width="25%")
+            col(width="25%")
+            col(width="25%")
+            col(width="25%")
+          tr
+            th What
+            th Where
+            th When
+            th Yes|No|Maybe
+            th Edit
+          tr
+            td Family Dinner
+            td 6028 W. Golden Ln. Glendale, AZ 85302
+            td 08/31/2016 08/31/2016 6:00pm
+            td 1/0/0
+            td 
+              a Edit
+          tr
+            td JSVillage
+            td 221 E Indianola Ave, Phoenix, AZ 85012
+            td 08/29/2916 6:00pm
+            td 10/4/2
+            td 
+              a Edit
+        
+        
+    
+  
