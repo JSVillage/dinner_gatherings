@@ -22,7 +22,9 @@ block content
                   span.glyphicon.glyphicon-calendar
           h3(style="text-align: center") Where will it be?
             .form-group
-              input.form-control(type="text")
-        a.btn.btn-primary(style="margin-right: 10px", href="/rkmarks/event-summary") Next
-        a.btn.btn-primary(href="/rkmarks/home") Back
+              #locationField
+                input#autocomplete.form-control(placeholder='Enter your address', onfocus='geolocate()', type='text')
+        a.btn.btn-primary(style="margin-right: 10px", href="/admin/rkmarks/event-summary") Next
+        a.btn.btn-primary(href="/admin/rkmarks/home") Back
+
         

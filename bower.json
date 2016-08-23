@@ -24,6 +24,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "angular": "^1.5.8",
-    "knockout": "^3.4.0"
+    "knockout": "^3.4.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37"
   }
 }

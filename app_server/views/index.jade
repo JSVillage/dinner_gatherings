@@ -7,13 +7,13 @@ block content
       h2.text-center Sign Up
   .row
     .col-md-12
-      form
+      form(name="signUpForm", action="/admin/rkmarks/home", method="get")
         .form-group
-          label(for="emailInput") Email Address 
-          input#emailInput.form-control(type='email')
+          label(for="emailInput") Email Address
+          input#emailInput.form-control(name="userName", type='email')
         .form-group
           label(for="passwordInput") Password
-          input#passwordInput.form-control(type='password')
+          input#passwordInput.form-control(name="password", type='password')
         button#createUser.btn.btn-primary(type="submit") Sign Up
           
         p.text-center

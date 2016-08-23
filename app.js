@@ -5,8 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 require('./app_api/models/db');
+var passport = require('passport');
 
 var routes = require('./app_server/routes/index');
+var adminRoutes = require('./app_server/routes/admin');
 var routesApi = require('./app_api/routes/index');
 
 
@@ -22,10 +24,15 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Static Content
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.use('/', routes);
+app.use('/admin', adminRoutes);
 app.use('/api', routesApi);
 // app.use('/users', users);
 

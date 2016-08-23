@@ -5,7 +5,7 @@ var eventSchema = new Schema({
   dateTime: { type: Date, "default": Date},
   location: String,
   name: String,
-  invitees: [String],
+  invitees: String,
   comments: String,
   user: { type: Schema.Types.ObjectId, ref: 'Users'}
 })
