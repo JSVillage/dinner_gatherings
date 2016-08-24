@@ -39,32 +39,75 @@ block content
               a Edit
         a(href="/admin/rkmarks/create-event") + Create Event
         h2 Event Invites
-        table.table-responsive(width="100%")
-          colgroup
-            col(width="25%")
-            col(width="25%")
-            col(width="25%")
-            col(width="25%")
-          tr
-            th What
-            th Where
-            th When
-            th Yes|No|Maybe
-            th Edit
-          tr
-            td Family Dinner
-            td 6028 W. Golden Ln. Glendale, AZ 85302
-            td 08/31/2016 08/31/2016 6:00pm
-            td 1/0/0
-            td 
-              a Edit
-          tr
-            td JSVillage
-            td 221 E Indianola Ave, Phoenix, AZ 85012
-            td 08/29/2916 6:00pm
-            td 10/4/2
-            td 
-              a Edit
+        ul.nav.nav-tabs(role="tablist")
+          li.active(role="presentation",) 
+            a(href="#accept", aria-controls='accept', role='tab', data-toggle ='tab') Accepted Events
+          li(role="presentation",) 
+            a(href="#decline", aria-controls='decline', role='tab', data-toggle ='tab') Declined Events
+          li(role="presentation",) 
+            a(href="#maybe", aria-controls='decline', role='tab', data-toggle ='tab') Potential Events
+        .tab-content
+          #accept.tab-pane.fade.in.active(role='tabpanel')
+            table.table-responsive(width="100%")
+              colgroup
+                col(width="25%")
+                col(width="25%")
+                col(width="25%")
+                col(width="25%")
+              tr
+                th What
+                th Where
+                th When
+                th Yes|No|Maybe
+                th View
+              tr
+                td JSVillage
+                td 221 E Indianola Ave, Phoenix, AZ 85012
+                td 08/29/2916 6:00pm
+                td 
+                  select.disabled
+                    option(selected="selected") Yes
+                    option No
+                    option Maybe
+                td 
+                  a View
+          #decline.tab-pane.fade(role="tab")
+            table.table-responsive(width="100%")
+              colgroup
+                col(width="25%")
+                col(width="25%")
+                col(width="25%")
+                col(width="25%")
+              tr
+                th What
+                th Where
+                th When
+                th Yes|No|Maybe
+                th View
+                tr
+                  td Family Dinner
+                  td 6028 W. Golden Ln. Glendale, AZ 85302
+                  td 08/31/2016 08/31/2016 6:00pm
+                  td 
+                    select
+                      option Yes
+                      option(selected="selected") No
+                      option Maybe
+                  td 
+                    a View
+          #maybe.tab-pane.fade(role="tab")
+            table.table-responsive(width="100%")
+              colgroup
+                col(width="25%")
+                col(width="25%")
+                col(width="25%")
+                col(width="25%")
+              tr
+                th What
+                th Where
+                th When
+                th Yes|No|Maybe
+                th View
         
         
     

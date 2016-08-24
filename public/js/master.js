@@ -101,4 +101,20 @@ var _debug = {
 // ko.applyBindings();
 $(document).ready(function(){
   $('#eventDate').datetimepicker();
+
+  $('#createEvent').click(function(e){
+    var postData = {
+      'dateTime': $('#eventDate').val(),
+      'location': $('#eventLocation').val(),
+      'invitees': $('#eventGuests').val(),
+    };
+
+    $.ajax({
+      "url": '/api/events',
+      'method': 'POST',
+      'dataType': 'json',
+      'data': postData,
+      "success": "success"
+    });
+  });
 });

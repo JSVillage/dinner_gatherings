@@ -13,11 +13,11 @@ block content
         form
           h3(style="text-align: center") Who will be attending?
             .form-group
-              input.form-control(type="text")
+              input.form-control(type="text", placeholder="ex: johnsmith@gmail.com, janedoe@gmail.com")
           h3(style="text-align: center") When will it be?
             .form-group
               #eventDate.input-group.date
-                input.form-control(type='text')
+                input.form-control(type='text', placeholder='01/01/2016 12:00AM')
                 span.input-group-addon
                   span.glyphicon.glyphicon-calendar
           h3(style="text-align: center") Where will it be?
@@ -26,5 +26,5 @@ block content
                 input#autocomplete.form-control(placeholder='Enter your address', onfocus='geolocate()', type='text')
         a.btn.btn-primary(style="margin-right: 10px", href="/admin/rkmarks/event-summary") Next
         a.btn.btn-primary(href="/admin/rkmarks/home") Back
-
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASB3yGwzVOXABBocHDE8bp9RRpspnjbwo&libraries=places&callback=initAutocomplete" async defer)
         
