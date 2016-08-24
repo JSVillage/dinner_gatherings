@@ -1,7 +1,25 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
+.navbar{
+  background-color: #FC7189;
+  height: 60px;
+  padding-top: 5px;
+}
+
+.navbar-brand{
+  color:#D6FFFB;
+  text-decoration: none;
+  text-transform:uppercase;;
+  letter-spacing: 1px;
+
+}
+
+.navbar-brand a{
+  font-size: 60px;
+}
+
 
 /*. {
   background-color: #1ac6ff;
