@@ -71,7 +71,7 @@ router.route('/users/:user')
     });
   })
 ;
-router.route('/users/:user_id/events')
+router.route('/events')
   .get(function(req, res){
     Events.find({user: ObjectId(req.params.user_id)}).populate('users').exec(function(err, events){
       if (err){
@@ -97,6 +97,6 @@ router.route('/users/:user_id/events')
       }
     });
   })
-
+;
 
 module.exports = router;
